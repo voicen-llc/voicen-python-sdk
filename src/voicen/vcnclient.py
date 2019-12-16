@@ -13,7 +13,6 @@ class VoicenClient:
 
 	#Base URL of API
 	api_base_url = "https://api.voicen.com/speechtotext/{}/".format(api_version)
-#	api_base_url = "http://127.0.0.1:8080/speechtotext/{}/".format(api_version)
 
 	def __init__(self, voicen_access_token):
 		if not voicen_access_token:
@@ -80,17 +79,13 @@ class VoicenClient:
 
 		#copy of default HTTP headers to use additional headers
 		headers = self.default_headers.copy()
-		#headers["Content-Type"] = "multipart/form-data"
 		headers["Accept"] = "application/json"
 		headers["Cache-Control"] = "no-cache"
-		#headers["content-Type"] = "multipart/form-data"
-		
 		
 		payload = {"lang": language}
 
 		try:
 			files={'file':open(local_file, "rb")}
-#			payload['file'] = local_file #open(local_file, "rb")
 		except IOError as err:
 			raise
 
