@@ -22,13 +22,13 @@ access_token = 'YOUR_ACCESS_TOKEN'
 
 
 #create voicen transcriber client
-voicen_client = vcnclient.VoicenClient('79434977-3c62-4711-b26d-543f0b99a98f')
+voicen_client = vcnclient.VoicenClient(access_token)
 
 """
 Uploads english_test.wav and creates job and returns job details. This job details will be used for next operations.
 The english test audio was used in example. Voicen currently supports four languages: english(en-EN), russian(ru-RU), turkish(tr-TR) and azerbaijani(az-AZ).
 """
-job = voicen_client.create_job_with_local_file("/home/toghrul/Projects/voicen-asr-python/audio/example-az.wav", "az-AZ")
+job = voicen_client.create_job_with_local_file("example-en.wav", "en-EN")
 
 #lets check job status and wait for complete
 while True:
