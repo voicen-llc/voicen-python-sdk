@@ -28,7 +28,7 @@ voicen_client = vcnclient.VoicenClient(access_token)
 Uploads english_test.wav and creates job and returns job details. This job details will be used for next operations.
 The english test audio was used in example. Voicen currently supports four languages: english(en-EN), russian(ru-RU), turkish(tr-TR) and azerbaijani(az-AZ).
 """
-job = voicen_client.create_job_with_local_file("example-en.wav", "en-EN")
+job = voicen_client.create_job_with_local_file("english_test.wav", "en-EN")
 
 #lets check job status and wait for complete
 while True:
