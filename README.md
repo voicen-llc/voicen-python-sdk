@@ -10,7 +10,7 @@ develop your own SDK for different languages using Voicen API documentation.
 
 You can install SDK direct from pip repository running this command:
 
-    pip install --upgrade voicen
+    pip3 install --upgrade voicen
 
 You can also install from source code:
 
